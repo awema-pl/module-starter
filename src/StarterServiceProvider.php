@@ -7,6 +7,7 @@ use AwemaPL\Starter\Listeners\EventSubscriber;
 use AwemaPL\Starter\Sections\Creators\Http\Middleware\StorageDownload;
 use AwemaPL\Starter\Sections\Creators\Repositories\Contracts\HistoryRepository;
 use AwemaPL\Starter\Sections\Creators\Repositories\EloquentHistoryRepository;
+use AwemaPL\Starter\Sections\Homes\Http\Middleware\AddWidgets;
 use AwemaPL\Starter\Sections\Installations\Http\Middleware\GlobalMiddleware;
 use AwemaPL\Starter\Sections\Installations\Http\Middleware\GroupMiddleware;
 use AwemaPL\Starter\Sections\Installations\Http\Middleware\Installation;
@@ -91,6 +92,7 @@ class StarterServiceProvider extends AwemaProvider
         $kernel = $this->app->make(\Illuminate\Contracts\Http\Kernel::class);
         $kernel->appendMiddlewareToGroup('web', GroupMiddleware::class);
         $kernel->appendMiddlewareToGroup('web', Installation::class);
+        $kernel->appendMiddlewareToGroup('web', AddWidgets::class);
     }
 
     /**
