@@ -30,7 +30,7 @@
                             <a class="btn btn-secondary px-4 py-2" href="{{route('register')}}">{{_p('starter::pages.welcome.register', 'Sign up')}}</a>
                             <a class="btn btn-info px-4 py-2 ml-4" href="{{route('login')}}">{{_p('starter::pages.welcome.login', 'Sign in')}}</a>
                         @else
-                            <a class="btn btn-secondary px-4 py-2" href="{{route(config('starter.routes.home.name_prefix') . 'index')}}">{{_p('starter::pages.welcome.go_to_panel', 'Go to the panel')}}</a>
+                            <a class="btn btn-info px-4 py-2" href="{{route(config('starter.routes.home.name_prefix') . 'index')}}">{{_p('starter::pages.welcome.go_to_panel', 'Go to the panel')}}</a>
                           @endif
                      </div>
                 </div>
