@@ -26,9 +26,13 @@
                     <h1 class="mb-3">{{config('app.name')}}</h1>
                     <p class="mb-5">{{_p('starter::pages.welcome.description', 'E-commerce solutions for individual orders. Take advantage of applications designed by sellers. Order the creation of dedicated software.')}}</p>
                     <div class="input-group input-group-newsletter">
-                        <a class="btn btn-secondary px-4 py-2" href="{{route('register')}}">{{_p('starter::pages.welcome.register', 'Sign up')}}</a>
-                        <a class="btn btn-info px-4 py-2 ml-4" href="{{route('login')}}">{{_p('starter::pages.welcome.login', 'Sign in')}}</a>
-                    </div>
+                    @if(!Auth::check())
+                            <a class="btn btn-secondary px-4 py-2" href="{{route('register')}}">{{_p('starter::pages.welcome.register', 'Sign up')}}</a>
+                            <a class="btn btn-info px-4 py-2 ml-4" href="{{route('login')}}">{{_p('starter::pages.welcome.login', 'Sign in')}}</a>
+                        @else
+                            <a class="btn btn-secondary px-4 py-2" href="{{route(config('starter.routes.home.name_prefix') . 'index')}}">{{_p('starter::pages.welcome.go_to_panel', 'Go to the panel')}}</a>
+                          @endif
+                     </div>
                 </div>
             </div>
         </div>

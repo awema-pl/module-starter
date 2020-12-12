@@ -42,5 +42,6 @@ return [
         'description'=>'Rozwiązania e-commerce pod indywidualne zamówienia. Skorzystaj z aplikacji projektowanych przez sprzedawców. Zamów utworzenie dedykowanego oprogramowania.',
         'login' =>'Logowanie',
         'register' =>'Rejestracja',
+        'go_to_panel' =>'Przejdź do panelu'
     ]
 ];
