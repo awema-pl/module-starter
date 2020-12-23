@@ -41,6 +41,7 @@ return [
         "meta_description" => "Tailored e-commerce solutions.",
         "description" => "Tailored e-commerce solutions.",
         "register" => "Sign up",
-        "login" => "Sign in"
+        "login" => "Sign in",
+        "go_to_panel" => "Go to the panel"
     ]
 ];
