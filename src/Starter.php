@@ -158,7 +158,7 @@ class Starter implements StarterContract
     public function isMigrated()
     {
         $tablesInDb = \DB::connection()->getDoctrineSchemaManager()->listTableNames();
-
+       
         $tables = array_values(config('starter.database.tables'));
         foreach ($tables as $table){
             if (!in_array($table, $tablesInDb)){
